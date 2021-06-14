@@ -6,7 +6,7 @@ object Main extends App {
 
     val switches = new FeatureSwitches("context-switches")
     val featureSwitchX = switches.featureX
-    val featureSwitchY = switches.alan
+    val featureSwitchY = switches.featureY
     print(featureSwitchX)
     print(featureSwitchY)
   }
