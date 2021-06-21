@@ -1,14 +1,11 @@
-package generator
+package switches.generator
 
-import model.Switch
+import switches.model.Switch
 
-
-class FeatureSwitches(switches: List[Switch]) extends Dynamic {
-
+final class FeatureSwitches(switches: Seq[Switch]) extends Dynamic {
   import scala.language.dynamics
-  // one-arg auxiliary constructor
   def this(path: String) = {
-    this(new SwitchBuilder().loadPath(path))
+    this(new SwitchBuilder().build(path))
   }
 
   def selectDynamic(name: String): Switch = {

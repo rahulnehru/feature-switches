@@ -1,12 +1,11 @@
-package model
+package switches.model
 
-trait Switch {
+trait Switch extends Override {
   val name: String
   def isActive: Boolean
-
 }
 
-private[model] trait Override extends Switch {
+sealed trait Override {
   def setAs(activationStatus: Boolean): Unit
   def reset(): Unit
 }

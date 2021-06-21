@@ -1,9 +1,9 @@
-package model
+package switches.model
 
 import java.time.ZonedDateTime
 import java.util.concurrent.atomic.AtomicBoolean
 
-case class DateSwitch(name: String, activationDate: ZonedDateTime) extends Switch with Override {
+final case class DateSwitch(name: String, activationDate: ZonedDateTime) extends Switch {
   private val hasOverride: AtomicBoolean = new AtomicBoolean(false)
   private val overrideValue: AtomicBoolean = new AtomicBoolean(false)
 

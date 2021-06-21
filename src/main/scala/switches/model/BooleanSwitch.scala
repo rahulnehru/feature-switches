@@ -1,8 +1,8 @@
-package model
+package switches.model
 
 import java.util.concurrent.atomic.AtomicBoolean
 
-case class BooleanSwitch(name: String, defaultState: Boolean) extends Switch with Override {
+final case class BooleanSwitch(name: String, defaultState: Boolean) extends Switch {
   protected val isOn: AtomicBoolean = new AtomicBoolean(defaultState)
 
   override def isActive: Boolean = isOn.getAcquire
