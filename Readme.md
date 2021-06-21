@@ -1,6 +1,6 @@
-#Feature Switches
+# Feature Switches
 
-##Overview
+## Overview
 
 A simple Scala library that allows development teams to manage feature toggles in a simple way.
 This provides two types of switches that can be implemented using HOCON configuration:
@@ -8,7 +8,7 @@ This provides two types of switches that can be implemented using HOCON configur
 * Date based switches (i.e. a feature should go live at a point in time)
 * Boolean switches (i.e. a feature is simply on/off)
 
-##Usage
+## Usage
  
 Create a configuration file e.g. `application.conf` and ensure it is available in your classpath. 
 You may want to even split out your feature switches entirely into a dedicated `features.conf`.
